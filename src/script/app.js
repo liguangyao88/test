@@ -1,5 +1,15 @@
 require('../style/app.scss')
 
-import s from "./compnents/name.js"
+//1.依赖react
+import React from "react"
+//2.依赖react-dom
+import ReactDom from "react-dom"
 
-console.log(s.str)
+//ReactDom.render(
+//	<div>1234</div>,
+//	document.getElementById("root")
+//)
+
+
+
+

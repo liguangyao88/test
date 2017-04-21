@@ -18,7 +18,8 @@ module.exports = {
 	//出口
 	output:{
 		path:__dirname+"/build",
-		filename:"[name]_[hash].js"//生成不同的名字,版本号控制
+		filename:"app.js",
+//		filename:"[name]_[hash].js"//生成不同的名字,版本号控制
 	},
 	//webserver服务器
 	devServer:{
@@ -33,7 +34,7 @@ module.exports = {
 			{
 				test:/\.js$/,
 				exclude:/node_modules/,//除了这里面的js文件
-				loader:"babel-loader"
+				loader:"react-hot-loader!babel-loader"
 			},
 			//css打包
 //			{
@@ -68,7 +69,8 @@ module.exports = {
 	plugins:[
 	//抽离CSS样式到文件(之前引入了这个对象)
 	new ExtractTextPlugin({
-		filename:"[name]_[hash].css",//生成的名字
+//		filename:"[name]_[hash].css",//生成的名字
+		filename:"app.css",
 		allChunks:true,//多入口
 		disable:false
 	}),
@@ -82,18 +84,31 @@ module.exports = {
 	}),
 	
 	//压缩代码
-	new webpack.optimize.UglifyJsPlugin({
-		compress:{//压缩的警告去掉
-			warnings:false
-		},
-		output:{//注释去掉
-			comments:false
-		}
-	}),
+//	new webpack.optimize.UglifyJsPlugin({
+//		compress:{//压缩的警告去掉
+//			warnings:false
+//		},
+//		output:{//注释去掉
+//			comments:false
+//		}
+//	}),
 	
 	//自动打开浏览器
 //	new OpenBrowserPlugin({
 //		url:"http://localhost:7000"
 //	})
-	]
+
+	// 5: 更改环境变量
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    })
+	],
+	// 组件抽离
+	  externals: {
+	    'react': 'window.React',
+	    'react-dom': 'window.ReactDOM',
+	    'react-router': 'window.ReactRouter'
+	  }
 }
