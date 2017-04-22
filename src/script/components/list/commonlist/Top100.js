@@ -1,15 +1,15 @@
 import React, {Component} from 'react'
 import {browserHistory} from 'react-router'
 
-class ListOriginal extends Component {
+class ListDay extends Component {
 
   render() {
     return (
-      <div className="listO">
-           222
+      <div className="listD">
+           333
       </div>
     )
   }
 }
 
-export default ListOriginal
+export default ListDay
