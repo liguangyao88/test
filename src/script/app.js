@@ -7,8 +7,16 @@ import ReactDom from "react-dom"
 //3.引入路由
 import {Router, Route, hashHistory, browserHistory, IndexRedirect} from 'react-router'
 
+<<<<<<< HEAD
 import Index from "./components/home/Index"
 
+=======
+
+import Index from "./components/home/Index"
+
+
+
+>>>>>>> gao
 import List from './components/list/List'
 
 import Mine from './components/mine/Mine'

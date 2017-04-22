@@ -1,5 +1,6 @@
 $base-color: #00b38a;
 .m-List{
+     background: #f9f5f4;
       width: 100%;
        height: 100%;
       @include flexbox();
@@ -52,12 +53,55 @@ $base-color: #00b38a;
                 }
               }
            }
-          .list_banner {
-                height: 1.65rem;
-                img {
-                  width: 100%;
-                  height: 100%;
-            }
-  }
-
+           .list_bgBox{
+               @include flex();
+                width: 100%;
+                overflow-y: scroll;
+              .list_banner {
+                    img {
+                      width: 100%;
+                      height: 100%;
+                }
+           }
+           
+            .list_box{
+                margin-top: .1rem;
+                padding: 0 .05rem;
+              .list_con{                  
+                  @include flexbox();
+                  @include flex-wrap(wrap);
+                  width:100%;
+                  dl{
+                      @include flexbox();
+                      @include flex-direction(column);
+                      padding:0 .05rem;
+                      padding-bottom: .1rem;
+                      width:50%;
+                      background: #f9f5f4;
+                      dt{
+                          img {
+                          width: 100%;                         
+                        }
+                      }
+                      dd{
+                          padding: .1rem .2rem .05rem .1rem;
+                          background: #fff;
+                          h1{
+                              font-size: .12rem;
+                              color: #333;                              
+                          }
+                          b{
+                                  font-weight: normal;
+                                  font-size: .1rem;
+                                  color: #999;
+                              }
+                          p{
+                              font-size: .12rem;
+                              color: #f92246;
+                          }    
+                      }                      
+                  }               
+              }                    
+            }     
+        }
 }
