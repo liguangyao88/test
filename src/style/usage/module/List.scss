@@ -1,0 +1,63 @@
+$base-color: #00b38a;
+.m-List{
+      width: 100%;
+       height: 100%;
+      @include flexbox();
+      @include flex-direction(column);
+      
+        @font-face {
+              font-family: 'yofont';
+              src: url('/iconfont/iconfont.woff') format('woff'),
+              url('/iconfont/iconfont.ttf') format('truetype')
+        }
+        
+        @import "../fragment/yo-header";
+        
+        @include yo-header(
+              $bgcolor: #fefefe,
+              $color: #3e151b,
+              $font-size: .16rem,
+              $item-ico-color: #66595b
+        ){
+          font-weight: normal;
+          @include border(0 0 0 0,#fefefe);
+          .regret {
+                right: 0;
+                left: auto;
+          }
+        }
+        
+             
+        .list_top{
+             height: .42rem;
+              background: #fefefe;
+              width: 100%;
+              > div {
+                width: 100%;
+                height: 100%;
+                @include flexbox();
+                > a {
+                  height: 100%;
+                  @include flex();
+                  @include flexbox();
+                  @include flex-direction(column);
+                  @include justify-content(center);
+                  text-align: center;
+                  font-size: .13rem;
+                  color: #3e151b;
+                  &.active {
+                    color: #fd224c;
+                    @include border(0 0 2px 0,#fd224c)
+                  }                 
+                }
+              }
+           }
+          .list_banner {
+                height: 1.65rem;
+                img {
+                  width: 100%;
+                  height: 100%;
+            }
+  }
+
+}
