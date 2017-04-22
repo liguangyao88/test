@@ -1,4 +1,6 @@
 import React,{Component} from "react"
+//引入react-router中的Link组件
+import {Link} from "react-router"
 
 export default class Footer extends Component {
 	render(){
@@ -6,16 +8,16 @@ export default class Footer extends Component {
 			<div className="footer">
 				<ul>
 					<li>
-						<a href="#javascript">
-							<i className="yo-ico active">&#xebc2;</i>
-							<span className="active">首页</span>
-						</a>
+						<Link to="/" activeClassName="active">
+							<i className="yo-ico">&#xebc2;</i>
+							<span>首页</span>
+						</Link>
 					</li>
 					<li>
-						<a href="#javascript">
+						<Link to="/list" activeClassName="active">
 							<i className="yo-ico">&#xe602;</i>
 							<span>榜单</span>
-						</a>
+						</Link>
 					</li>
 					<li>
 						<a href="#javascript">
@@ -24,10 +26,10 @@ export default class Footer extends Component {
 						</a>
 					</li>
 					<li>
-						<a href="#javascript">
+						<Link to="/mine" activeClassName="active">
 							<i className="yo-ico">&#xe716;</i>
 							<span>我的</span>
-						</a>
+						</Link>
 					</li>
 				</ul>
 			</div>

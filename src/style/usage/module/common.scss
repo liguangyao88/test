@@ -1,3 +1,8 @@
+$base-color:#FF4258;
+$font-color:#846F6F;
+$base-background:#FAF5F5;
+$base-font:0.13rem;
+
 #root{
     width:100%;
     height:100%;
@@ -7,6 +12,11 @@
   font-family: 'yofont';
   src: url('/iconfont/iconfont.woff') format('woff'),
   url('/iconfont/iconfont.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'yofont';
+  src: url('/iconfont/iconfont1.woff') format('woff'),
+  url('/iconfont/iconfont1.ttf') format('truetype')
 }
 
 .footer{
@@ -28,23 +38,28 @@
                 @include flexbox();
                 @include flex-direction(column);
                 @include justify-content(center);
-
+                &.active{//可以像下面这样写active
+                    
+                    i{
+                        color: #FF4258; 
+                    }
+                    span{
+                        color: #FF4258; 
+                    }
+                }
+                
                 i{
                     font-size:0.24rem;
                     color: #B9AAAA;
-                    line-height: 1.2;
-                &.active{
-                    color: #FF4258;
+                    line-height: 1.2;                    
                 }
                     
-                }
+
                 span{
                     font-size:0.12rem;
                     @include transform(scale(0.8));
                     color: black;
-                    &.active{
-                    color: #FF4258;
-                }
+
                 }
             }
         }
