@@ -29,7 +29,16 @@ ReactDOM.render((
 
 
 
+<<<<<<< HEAD
 
+=======
+// 引入分类页
+import Classification from "./components/classification/Classification" 
+>>>>>>> yutai
 
+// console.log(Classification)
 
+ReactDom.render(
+	(<Classification />),document.getElementById("root")
+)
 
