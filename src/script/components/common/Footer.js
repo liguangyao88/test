@@ -20,10 +20,10 @@ export default class Footer extends Component {
 						</Link>
 					</li>
 					<li>
-						<a href="#javascript">
+						<Link to="/classification" activeClassName="active">
 							<i className="yo-ico">&#xe6e3;</i>
 							<span>分类</span>
-						</a>
+						</Link>
 					</li>
 					<li>
 						<Link to="/mine" activeClassName="active">
