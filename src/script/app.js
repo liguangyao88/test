@@ -5,11 +5,12 @@ import React from "react"
 //2.依赖react-dom
 import ReactDom from "react-dom"
 
-//ReactDom.render(
-//	<div>1234</div>,
-//	document.getElementById("root")
-//)
+// 引入分类页
+import Classification from "./components/classification/Classification" 
 
+// console.log(Classification)
 
-
+ReactDom.render(
+	(<Classification />),document.getElementById("root")
+)
 
