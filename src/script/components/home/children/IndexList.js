@@ -7,7 +7,6 @@ export default class IndexList extends Component {
 		return (
 			<div className="index_list">
 				<IndexItem />
-				
 			</div>
 		)
 	}

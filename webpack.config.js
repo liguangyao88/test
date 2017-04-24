@@ -25,7 +25,13 @@ module.exports = {
 	devServer:{
 		contentBase:"./build",//路径
 		host:"localhost",
-		port: 2000
+		port: 2000,
+		proxy: {
+	      '/json': {
+	        target: 'http://localhost:7001',
+	        pathRewrite: {'^/json': ''}
+	      }
+	    }
 	},
 	//模块
 	module:{

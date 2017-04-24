@@ -1,4 +1,4 @@
-{
+{"data":{
   "code": 200,
   "data": {
     "items": [
@@ -884,7 +884,20 @@
           "introduction": "资深买买买达人",
           "nickname": "小礼君"
         },
-        "column": null,
+        "column": {
+          "banner_image_url": "http://img03.liwushuo.com/image/160902/fm7knqhbd.jpg-w300",
+          "category": "美护",
+          "cover_image_url": "http://img02.liwushuo.com/image/160902/7obqmumbf.jpg-w720",
+          "created_at": 1472820604,
+          "description": "明星的美丽秘诀永远是大家最感兴趣的话题之一，现在就让我们一一揭秘。",
+          "id": 105,
+          "order": 0,
+          "post_published_at": 1492658243,
+          "status": 0,
+          "subtitle": "",
+          "title": "小蝌蚪报告",
+          "updated_at": 1492747584
+        },
         "content_type": 1,
         "content_url": "http://www.liwushuo.com/posts/1047905/content",
         "cover_animated_webp_url": null,
@@ -1019,4 +1032,5 @@
     }
   },
   "message": "OK"
+}
 }

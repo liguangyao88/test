@@ -21,7 +21,7 @@ export default class Footer extends Component {
 					</li>
 					<li>
 						<a href="#javascript">
-							<i className="yo-ico">&#xe600;</i>
+							<i className="yo-ico">&#xe6e3;</i>
 							<span>分类</span>
 						</a>
 					</li>
