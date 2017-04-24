@@ -11,9 +11,8 @@ class List extends Component {
     return (
       <div className="m-List">
         <ListHeader />
-        <ListTop/>
-        
-        <ListDay/>
+        <ListTop/>        
+				{this.props.children}
         <Footer/>
       </div>
     )

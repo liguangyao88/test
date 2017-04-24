@@ -1,28 +1,62 @@
 import React, {Component} from 'react'
 import {browserHistory} from 'react-router'
-import ListBanner from './ListBanner'
-class ListDay extends Component {
-   render() {
-    return (
-    	<div className="list_bgBox">
-    	   <ListBanner/>
-	    	<div className="list_box">
-			    	
-		      <div className="list_con">
-		           <dl>
-				          <dt><img src="http://img03.liwushuo.com/image/161114/77wxjxdno_w.jpg-w720" alt=""/></dt>
-				          <dd>
-				            <h1>超人气耳钉礼盒</h1>
-				            <b>诗与岛屿·幸运-A925纯银耳钉礼盒</b>
-				            <p>$ <i>88</i></p>
-				          </dd>
-		        </dl>
-		        		      
-		      </div>
-	      </div>
-      </div>
-    )
+
+export default class ListDay extends Component {
+ constructor(props) {
+    super(props)
+    this.state= {
+			data:[]
+    }
   }
+ 
+	getlistdata(list){
+		return list.map((value,index)=>{
+			
+				return (
+					<dl>
+			          <dt><img src={value.image_urls[0]} alt=""/></dt>
+			          <dd>
+			            <h1>{value.short_description}</h1>
+			            <b>{value.name}</b>
+			            <p>$ <i>{value.price}</i></p>
+			          </dd>
+				     </dl>
+				)
+			
+		})
+	}
+
+
+
+  render() {
+			return (
+
+		    	<div className="list_bgBox">
+		    	   <div className="list_banner">
+			          <img src="http://img01.liwushuo.com/image/160909/3gnib47x3.png-w720" alt=""/>
+			       </div>
+			    	<div className="list_box">
+					    	
+				      <div className="list_con">
+				           {this.getlistdata(this.state.data)}
+				        		      
+				      </div>
+			      </div>
+		      </div>
+
+    )
+
 }
 
-export default ListDay
+ componentDidMount() {
+    fetch("/api/v2/ranks_v3/ranks/1?limit=40&offset=0")
+      .then((response)=>response.json())
+     .then((res)=>{
+		this.setState({
+			data:res.data.items
+		})
+     	}
+     )
+ }
+ 
+}

@@ -25,7 +25,18 @@ module.exports = {
 	devServer:{
 		contentBase:"./build",//路径
 		host:"localhost",
-		port: 2000
+		port: 2000,
+		proxy: {
+      '/api': {
+        target: 'https://api.liwushuo.com',
+        changeOrigin: true,
+        pathRewrite: {'^/api': ''}
+      },
+      '/json': {
+        target: 'http://localhost:2001',
+        pathRewrite: {'^/json': ''}
+      }
+    }
 	},
 	//模块
 	module:{
