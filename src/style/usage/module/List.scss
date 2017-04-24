@@ -38,17 +38,18 @@ $base-color: #00b38a;
                 height: 100%;
                 @include flexbox();
                 > a {
-                  height: 100%;
-                  @include flex();
+                  height: 100%;                 
                   @include flexbox();
                   @include flex-direction(column);
                   @include justify-content(center);
+                  @include flex();
                   text-align: center;
                   font-size: .13rem;
                   color: #3e151b;
                   &.active {
                     color: #fd224c;
-                    @include border(0 0 2px 0,#fd224c)
+//                  @include border(0 0 2px 0,#fd224c)
+                       
                   }                 
                 }
               }

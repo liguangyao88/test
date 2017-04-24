@@ -23,7 +23,6 @@ import ListDay from './components/list/commonlist/ListDay'
 console.log(Top100)
 
 
-//console.log(Mine)
 
 ReactDOM.render((
   <Router history={browserHistory}>
