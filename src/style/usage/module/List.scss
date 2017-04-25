@@ -80,8 +80,7 @@
                   @include flexbox();
                   @include flex-wrap(wrap);
                   width:100%;
-                  dl{            
-                      height: 2.69rem;         
+                  dl{                 
                       @include flexbox();
                       @include flex-direction(column);
                       padding:0 .05rem;
