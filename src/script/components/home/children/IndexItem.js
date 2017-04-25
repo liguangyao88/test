@@ -53,11 +53,10 @@ export default class IndexItem extends Component {
 	
 	componentDidMount(){
 		let a = this.props.uri
-		console.log(a)
+//		console.log(a)
 		fetch(`json/${a}`)
 	      .then((response)=>response.json())
 	      .then((res)=>{
-//			console.log(res.data.items.column.title)
 			this.setState({
 				data:res.data.items
 			})
