@@ -1,0 +1,132 @@
+.m-Classification{
+	.m-classificationheader {
+	    background: #fffefe;
+		ul{
+            @include border(1px 0 0 0, #d6d5d5);
+            padding: .17rem 0 .09rem;
+			color: #321e1e;
+			font-size: .14rem;
+			text-align: center;
+			overflow: hidden;
+			li {
+			    @include flexbox();
+			    @include flex-direction(column);
+		        width: .85rem;
+		        margin: 0 auto;
+			    div{
+			        width: 100%;
+			        @include flexbox();
+			        @include justify-content(space-around);
+			        padding-bottom: .12rem;
+			    }
+			    .active{
+                    color: #ff2d47;
+                }
+			    em{
+			        height: .03rem;
+			        width: .38rem;
+			        @include border-radius(.05rem);
+			        background: #ff2d47;
+			    }
+			}
+		}
+		.m-search {
+		    padding: 0 .1rem .07rem;
+		    input{
+		     width: 100%;
+		     border: 0;
+		     height: .3rem;
+		     @include border-radius(.5rem);
+		     text-align: center;
+		     font-size: .12rem;
+		     color: #8c7878;
+		     background: #faf5f5 url(/img/nav_bar_icon_search_dark.png) no-repeat;
+		     background-size: 5% auto;
+		     background-position: 35% 50%;
+		     text-indent: 15%;
+		    }
+		}
+	}
+	.m-Classificationcontent {
+        @include flex();
+        width: 100%;
+        background: #faf5f5;
+        .m-classificationcolumn{
+            padding-bottom: .1rem;
+            .m-classificationcolumnList {
+                padding-left: .1rem;
+                overflow-x: scroll;
+                background: #fff;
+                >div{
+                    width: 11.48rem;                
+                    @include flexbox();
+                    @include flex-wrap(wrap)
+                    >div {
+                        width: 2.87rem;
+                        overflow: hidden;
+                        padding-bottom: .1rem;
+                        @include flexbox();
+                        img{
+                            width: 1.35rem;
+                            height: .75rem;
+                            padding-right: .1rem;
+                            @include border-radius(.05rem)
+                        }
+                        >div{
+                            @include flexbox();
+                            @include flex-direction(column);
+                            overflow: hidden;
+                            span{
+                                display: block;
+                            }
+                            span:first-child {
+                                font-size: .14rem;
+                                height: .4rem;
+                                line-height: .4rem;
+                                padding-top: .05rem;
+                                color: #321e1e;
+                            }
+                            span:nth-of-child(2) {
+                                font-size: .11rem;
+                                color: #a09696;
+                            }
+                        }
+                    }
+                    >span{
+                        display: block;
+                        height: .33rem;
+                        width: 1.28rem;
+                        text-align: center;
+                        line-height: .33rem;
+                        border-radius: .5rem;
+                        @include border(1px , #ff2d47);
+                        color: #ff2d47;
+                        margin-top: .2rem;
+                        font-size: .14rem;
+                    }
+    
+                }
+            }
+    	    .m-classificationnav {
+    	        font-size: .14rem;
+    	        color: #503c3c;
+    	        padding: .15rem .1rem .15rem .1rem;
+    	        background-color: #fefefe;
+    	        @include flexbox();
+    	        @include justify-content(space-between);
+    	        overflow: hidden;
+    	        div:nth-child(2) {
+    	            em{
+    	                height: .1rem;
+    	                width: .1rem;
+    	                background: url(/img/abc_ic_go_search_api_holo_light.png) no-repeat;
+    	                padding: .02rem .1rem;
+    	            }
+    	        }
+    	    }
+	    }
+	    .m-classificationother{
+	        background: #fff;
+	    }
+	}
+}
