@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
 import {browserHistory} from 'react-router'
 
+import Scroller from '../../../../component_dev/scroller/src'
+
+import Loading, {loading} from '../../../../component_dev/loading/src'
 
 export default class Top100 extends Component {
  constructor(props) {
@@ -11,6 +14,9 @@ export default class Top100 extends Component {
     }
   }
  
+ componentWillMount() {
+    loading.show()
+  }
 	getlistdata(list){
 		return list.map((value,index)=>{
 			
@@ -31,8 +37,9 @@ export default class Top100 extends Component {
 
   render() {
 			return (
-
+    
 		    	<div className="list_bgBox">
+		    	<Scroller extraClass={'yo-scroller-a'} scrollX={false} scrollY={true}>
 		    	  <div className="list_banner">
 			           <img src="http://img01.liwushuo.com/image/160909/uzptw7wlm.png-w720" alt=""/>
 			      </div>
@@ -42,6 +49,7 @@ export default class Top100 extends Component {
 				           {this.getlistdata(this.state.data)}				        		      
 				      </div>
 			      </div>
+			      </Scroller>
 		      </div>
 
     )
@@ -55,8 +63,8 @@ export default class Top100 extends Component {
 		this.setState({
 			data:res.data.items
 		})
-     	}
-     )
+		loading.hide()
+     })
  }
  
 }

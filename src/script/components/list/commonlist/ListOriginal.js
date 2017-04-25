@@ -1,6 +1,10 @@
 import React, {Component} from 'react'
 import {browserHistory} from 'react-router'
 
+import Scroller from '../../../../component_dev/scroller/src'
+
+import Loading, {loading} from '../../../../component_dev/loading/src'
+//import List from '../../../../component_dev/list/src'
 export default  class ListOriginal extends Component {
  constructor(props) {
     super(props)
@@ -9,6 +13,9 @@ export default  class ListOriginal extends Component {
     }
   }
  
+ componentWillMount() {
+    loading.show()
+  }
 	getlistdata(list){
 		return list.map((value,index)=>{
 			
@@ -32,6 +39,22 @@ export default  class ListOriginal extends Component {
 			return (
 
 		    	<div className="list_bgBox">
+		    	<Scroller extraClass={'yo-scroller-a'} scrollX={false} scrollY={true}
+			    	ref="scroller "
+	            	usePullRefresh={true}
+	            	onRefresh={()=>{
+		              fetch("/api/v2/ranks_v3/ranks/3?limit=30&offset=0?")
+		                .then((response)=>response.json())
+				     .then((res)=>{
+						this.setState({
+							data: this.state.data.concat (res.data.items)
+						})
+//		                 this.refs.scroller.stopRefreshing(true);
+
+		                })
+		            }}	            	
+		    	>
+		    	
 		    	    <div className="list_banner">
 			           <img src="http://img03.liwushuo.com/image/160909/2q09s3yzy.png-w720" alt=""/>
 			      </div>
@@ -41,7 +64,9 @@ export default  class ListOriginal extends Component {
 				           {this.getlistdata(this.state.data)}
 				        		      
 				      </div>
-			      </div>
+			      </div>			     
+			      </Scroller>
+			      
 		      </div>
 
     )
@@ -55,8 +80,8 @@ export default  class ListOriginal extends Component {
 		this.setState({
 			data:res.data.items
 		})
-     	}
-     )
+		loading.hide()
+     })
  }
  
 }

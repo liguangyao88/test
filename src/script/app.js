@@ -25,7 +25,7 @@ console.log(Top100)
 
 
 ReactDOM.render((
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
     <Route path="/" component={Index}></Route>
     
     <Route path="/list" component={List}>

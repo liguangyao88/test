@@ -1,4 +1,7 @@
-$base-color: #00b38a;
+@charset "UTF-8";
+
+@import "../component/scroller";
+
 .m-List{
      background: #f9f5f4;
       width: 100%;
@@ -38,7 +41,7 @@ $base-color: #00b38a;
                 height: 100%;
                 @include flexbox();
                 > a {
-                  height: 100%;                 
+                  height: 100%;               
                   @include flexbox();
                   @include flex-direction(column);
                   @include justify-content(center);
@@ -57,7 +60,12 @@ $base-color: #00b38a;
            .list_bgBox{
                @include flex();
                 width: 100%;
-                overflow-y: scroll;
+                overflow: hidden;
+//              height: 15rem;
+//              overflow-y: scroll;
+                .yo-scroller-a {
+                  height: 100%;
+                }
               .list_banner {
                     img {
                       width: 100%;
@@ -72,7 +80,8 @@ $base-color: #00b38a;
                   @include flexbox();
                   @include flex-wrap(wrap);
                   width:100%;
-                  dl{
+                  dl{            
+                      height: 2.69rem;         
                       @include flexbox();
                       @include flex-direction(column);
                       padding:0 .05rem;
