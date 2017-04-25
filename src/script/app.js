@@ -15,6 +15,9 @@ import List from './components/list/List'
 
 // 引入分类页
 import Classification from "./components/classification/Classification" 
+import Raiders from "./components/classification/Raiders"
+import Single from "./components/classification/Single"
+
 
 import Mine from './components/mine/Mine'
 
@@ -46,6 +49,7 @@ import ListDay from './components/list/commonlist/ListDay'
 
 ReactDOM.render((
   <Router history={hashHistory}>
+<<<<<<< HEAD
     <Route path="/" component={Index}>
     		<IndexRedirect to="/middle" />
     		<Route path="middle" component={IndexMiddle} />
@@ -62,6 +66,15 @@ ReactDOM.render((
     </Route>
     <Route path="/classification" component={Classification}></Route>
 
+=======
+    <Route path="/" component={Index}></Route>
+    <Route path="/list" component={List}></Route>
+    <Route path="/classification" component={Classification}>
+    	<IndexRedirect to="/classification/raiders" />
+      <Route path="/classification/raiders" component={Raiders} />
+      <Route path="/classification/single" component={Single} />
+    </Route>
+>>>>>>> yutai
     <Route path="/mine" component={Mine}></Route>
   </Router>
 ), document.getElementById('root'))
