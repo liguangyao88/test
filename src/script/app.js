@@ -13,10 +13,11 @@ import Index from "./components/home/Index"
 import List from './components/list/List'
 
 
-// 引入分类页
+// 引入分类页开始
 import Classification from "./components/classification/Classification" 
 import Raiders from "./components/classification/Raiders"
 import Single from "./components/classification/Single"
+// 引入分类页结束
 
 
 import Mine from './components/mine/Mine'
@@ -36,12 +37,13 @@ import IndexElder from "./components/home/children/IndexElder"
 
 //console.log(IndexBoy)//ok
 
+//引入榜单页开始
 import Top100 from "./components/list/commonlist/Top100"
 
 import ListOriginal from './components/list/commonlist/ListOriginal'
 
 import ListDay from './components/list/commonlist/ListDay'
-
+//引入榜单页结束
 //console.log(Top100)
 
 
@@ -49,7 +51,6 @@ import ListDay from './components/list/commonlist/ListDay'
 
 ReactDOM.render((
   <Router history={hashHistory}>
-<<<<<<< HEAD
     <Route path="/" component={Index}>
     		<IndexRedirect to="/middle" />
     		<Route path="middle" component={IndexMiddle} />
@@ -64,17 +65,11 @@ ReactDOM.render((
          <Route path="/list/Top100" component={Top100}></Route>    
          <Route path="/list/ListOriginal" component={ListOriginal}></Route>
     </Route>
-    <Route path="/classification" component={Classification}></Route>
-
-=======
-    <Route path="/" component={Index}></Route>
-    <Route path="/list" component={List}></Route>
     <Route path="/classification" component={Classification}>
     	<IndexRedirect to="/classification/raiders" />
       <Route path="/classification/raiders" component={Raiders} />
       <Route path="/classification/single" component={Single} />
-    </Route>
->>>>>>> yutai
+    	</Route>
     <Route path="/mine" component={Mine}></Route>
   </Router>
 ), document.getElementById('root'))
