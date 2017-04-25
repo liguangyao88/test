@@ -10,14 +10,19 @@ class Raidersother extends Component {
       	<div className="m-Raidersmore">
 	      	<div className="m-Raidersmorelist">
 		      	<div><img src="./img/duk8guejk.png" /></div>
-		      	<div><img src="./img/hbd7w1sf4.png" /></div>
-		      	<div><img src="./img/hbd7w1sf4.png" /></div>
-		      	<div><img src="./img/hbd7w1sf4.png" /></div>
-		      	<div><img src="./img/hbd7w1sf4.png" /></div>
 		      </div>
 	      </div>
       </div>
     )
+  }
+  componentDidMount() {
+    fetch(this.props.uri)
+      .then((response)=>response.json())
+      .then((res)=>{
+        this.setState({
+          dataSource: res.subjects
+        })
+      })
   }
 }
 
