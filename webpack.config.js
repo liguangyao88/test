@@ -27,24 +27,16 @@ module.exports = {
 		host:"localhost",
 		port: 2000,
 		proxy: {
-<<<<<<< HEAD
 	      '/json': {
 	        target: 'http://localhost:7001',
 	        pathRewrite: {'^/json': ''}
-	      }
+	      	},
+	     '/api': {
+	        target: 'https://api.liwushuo.com',
+	        changeOrigin: true,
+	        pathRewrite: {'^/api': ''}
+	    	 }
 	    }
-=======
-      '/api': {
-        target: 'https://api.liwushuo.com',
-        changeOrigin: true,
-        pathRewrite: {'^/api': ''}
-      },
-      '/json': {
-        target: 'http://localhost:2001',
-        pathRewrite: {'^/json': ''}
-      }
-    }
->>>>>>> gao
 	},
 	//模块
 	module:{
