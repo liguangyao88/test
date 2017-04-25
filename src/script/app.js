@@ -12,6 +12,7 @@ import Index from "./components/home/Index"
 
 import List from './components/list/List'
 
+<<<<<<< HEAD
 // 引入分类页
 import Classification from "./components/classification/Classification" 
 
@@ -31,11 +32,23 @@ import IndexElder from "./components/home/children/IndexElder"
 //主页上面的5个子路由结束
 
 //console.log(IndexBoy)//ok
+=======
+import Mine from './components/mine/Mine'
 
-//console.log(Mine)
+import Top100 from "./components/list/commonlist/Top100"
+
+import ListOriginal from './components/list/commonlist/ListOriginal'
+
+import ListDay from './components/list/commonlist/ListDay'
+
+console.log(Top100)
+
+>>>>>>> gao
+
 
 ReactDOM.render((
   <Router history={hashHistory}>
+<<<<<<< HEAD
     <Route path="/" component={Index}>
     		<IndexRedirect to="/middle" />
     		<Route path="middle" component={IndexMiddle} />
@@ -46,6 +59,16 @@ ReactDOM.render((
     </Route>
     <Route path="/list" component={List}></Route>
     <Route path="/classification" component={Classification}></Route>
+=======
+    <Route path="/" component={Index}></Route>
+    
+    <Route path="/list" component={List}>
+    <IndexRedirect to="/list/ListDay" />
+         <Route path="/list/ListDay" component={ListDay}></Route>
+         <Route path="/list/Top100" component={Top100}></Route>    
+         <Route path="/list/ListOriginal" component={ListOriginal}></Route>
+    </Route>
+>>>>>>> gao
     <Route path="/mine" component={Mine}></Route>
   </Router>
 ), document.getElementById('root'))
@@ -53,6 +76,14 @@ ReactDOM.render((
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> gao
 
 
 
