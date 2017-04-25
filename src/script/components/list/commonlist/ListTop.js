@@ -7,9 +7,9 @@ class ListTop extends Component {
     return (
       <div className="list_top">
           <div>
-	          <Link to="/ListDay" activeClassName="active">每日推荐</Link>
-	          <Link to="./commonlist/Top100" activeClassName="active">Top100</Link>
-	          <Link to="./commonlist/ListOriginal" activeClassName="active">独立原创榜</Link>
+	          <Link to="/list/ListDay" activeClassName="active">每日推荐</Link>
+	          <Link to="/list/Top100" activeClassName="active">Top100</Link>
+	          <Link to="/list/ListOriginal" activeClassName="active">独立原创榜</Link>
 	        </div>
       </div>
     )

@@ -30,7 +30,12 @@ module.exports = {
 	      '/json': {
 	        target: 'http://localhost:7001',
 	        pathRewrite: {'^/json': ''}
-	      }
+	      	},
+	     '/api': {
+	        target: 'https://api.liwushuo.com',
+	        changeOrigin: true,
+	        pathRewrite: {'^/api': ''}
+	    	 }
 	    }
 	},
 	//模块
