@@ -49,12 +49,12 @@ import Top100 from "./components/list/commonlist/Top100"
 import ListOriginal from './components/list/commonlist/ListOriginal'
 
 import ListDay from './components/list/commonlist/ListDay'
-<<<<<<< HEAD
+
 //引入榜单页结束
-=======
 
 
->>>>>>> gao
+
+
 //console.log(Top100)
 
 import Search from "./components/search/Search"
@@ -78,25 +78,19 @@ ReactDOM.render((
          <Route path="/list/Top100" component={Top100}></Route>    
          <Route path="/list/ListOriginal" component={ListOriginal}></Route>
     </Route>
-<<<<<<< HEAD
     <Route path="/classification" component={Classification}>
     	<IndexRedirect to="/classification/raiders" />
       <Route path="/classification/raiders" component={Raiders} />
       <Route path="/classification/single" component={Single} />
     	</Route>
-    <Route path="/mine" component={Mine}></Route>
     <Route path="/search" component={Search}></Route>
     <Route path="/self" component={Self}></Route>
-=======
-    <Route path="/classification" component={Classification}></Route>
-
     <Route path="/mine" component={Mine}>
     			<IndexRedirect to="/mine/MineLogin" />
     			<Route path="/mine/MineLogin" component={MineLogin}></Route>
          <Route path="/mine/MineRegister" component={MineRegister}></Route>
     </Route>
     <Route path="/MineSouvenir" component={MineSouvenir}></Route>
->>>>>>> gao
   </Router>
 ), document.getElementById('root'))
 

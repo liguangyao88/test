@@ -32,13 +32,13 @@ export default class MineRegister extends Component {
 	
 	
   registor() {
-
     this.submit({
       uri: '/nodejs/users/registor',
       callback: (res)=>{
-        if (res.username) {
-            localStorage.setItem('username', res.username)
-			hashHistory.push("/MineSouvenir")		
+      	console.log(res)
+        if (res.users) {
+        	console.log(res)
+			hashHistory.push("/Mine/MineLogin")		
         } else {
           console.log("false")
         }
