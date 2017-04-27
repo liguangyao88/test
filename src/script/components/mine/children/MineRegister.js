@@ -36,9 +36,10 @@ export default class MineRegister extends Component {
     this.submit({
       uri: '/nodejs/users/registor',
       callback: (res)=>{
-        if (res.username) {
+        if (res.users) {
+//      	console.log(res.username)
             localStorage.setItem('username', res.username)
-			hashHistory.push("/MineSouvenir")		
+			hashHistory.push("/Mine/MineLogin")		
         } else {
           console.log("false")
         }
