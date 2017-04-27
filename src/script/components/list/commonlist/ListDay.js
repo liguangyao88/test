@@ -38,7 +38,23 @@ export default  class ListDay extends Component {
 			return (
 
 		    	<div className="list_bgBox">
-		    	<Scroller extraClass={'yo-scroller-a'} scrollX={false} scrollY={true}>
+		    	<Scroller extraClass={'yo-scroller-a'} scrollX={false} scrollY={true}
+		    	
+		    	ref="scroller"
+		            	usePullRefresh={true}
+		            	onRefresh={()=>{
+			              fetch("/api/v2/ranks_v3/ranks/1?limit=40&offset=0")
+			                .then((response)=>response.json())
+					     .then((res)=>{
+							this.setState({
+								data: this.state.data.concat (res.data.items)
+							})
+			                 this.refs.scroller.stopRefreshing(true);
+	
+			                })
+			            }}	            	
+		    	
+		    	>
 		    	    <div className="list_banner">
 			           <img src="http://img01.liwushuo.com/image/160909/3gnib47x3.png-w720" alt=""/>
 			      </div>

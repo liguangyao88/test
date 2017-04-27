@@ -35,7 +35,12 @@ module.exports = {
 	        target: 'https://api.liwushuo.com',
 	        changeOrigin: true,
 	        pathRewrite: {'^/api': ''}
-	    	 }
+	    	 },
+	    	'/nodejs': {
+		        target: 'http://localhost:8000',
+		        changeOrigin: true,
+		        pathRewrite: {'^/nodejs': ''}
+		      }
 	    }
 	},
 	//模块

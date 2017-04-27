@@ -18,6 +18,12 @@ import Classification from "./components/classification/Classification"
 
 import Mine from './components/mine/Mine'
 
+import MineSouvenir from './components/mine/children/MineSouvenir'
+
+import MineRegister from './components/mine/children/MineRegister'
+
+import MineLogin from './components/mine/children/MineLogin'
+
 //主页上面的5个子路由开始
 import IndexMiddle from "./components/home/children/IndexMiddle"
 
@@ -38,6 +44,7 @@ import Top100 from "./components/list/commonlist/Top100"
 import ListOriginal from './components/list/commonlist/ListOriginal'
 
 import ListDay from './components/list/commonlist/ListDay'
+
 
 //console.log(Top100)
 
@@ -62,7 +69,12 @@ ReactDOM.render((
     </Route>
     <Route path="/classification" component={Classification}></Route>
 
-    <Route path="/mine" component={Mine}></Route>
+    <Route path="/mine" component={Mine}>
+    			<IndexRedirect to="/mine/MineLogin" />
+    			<Route path="/mine/MineLogin" component={MineLogin}></Route>
+         <Route path="/mine/MineRegister" component={MineRegister}></Route>
+    </Route>
+    <Route path="/MineSouvenir" component={MineSouvenir}></Route>
   </Router>
 ), document.getElementById('root'))
 

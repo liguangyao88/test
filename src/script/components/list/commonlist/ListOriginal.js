@@ -40,7 +40,7 @@ export default  class ListOriginal extends Component {
 
 		    	<div className="list_bgBox">
 		    	<Scroller extraClass={'yo-scroller-a'} scrollX={false} scrollY={true}
-			    	ref="scroller "
+			    	ref="scroller"
 	            	usePullRefresh={true}
 	            	onRefresh={()=>{
 		              fetch("/api/v2/ranks_v3/ranks/3?limit=30&offset=0?")
@@ -49,7 +49,7 @@ export default  class ListOriginal extends Component {
 						this.setState({
 							data: this.state.data.concat (res.data.items)
 						})
-//		                 this.refs.scroller.stopRefreshing(true);
+		                 this.refs.scroller.stopRefreshing(true);
 
 		                })
 		            }}	            	

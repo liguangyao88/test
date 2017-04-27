@@ -2,11 +2,133 @@
     width:100%;
     height:100%;
     @include flexbox();
-    @include flex-direction(column);
-    .mine_login{
+    @include flex-direction(column);      
+     background: #fffefe;
+    .mine_login{  
+        padding:0 .42rem ;      
         @include flex()
         width:100%;
         overflow: hidden;
-        
+        text-align: center;
+        .mine_head{
+            margin:.46rem auto  .1rem;
+            i{            
+            font-size: .7rem;
+            color: #9d6b57;
+            }
+        }
+        h2{
+            font-size: .14rem;
+            font-weight:normal ;
+            color: #333;
+            padding-bottom: .55rem;
+        }
+        .choose{
+            font-size: .11rem;
+            padding-top: .22rem;
+            margin-right: 0;           
+            padding-left: 2rem;
+            a{
+                 color: #fd224c;
+            }
+        }
+        .social{
+            padding-top: .55rem;
+            font-size: .11rem;
+            color:#8e7b7b;
+            b{
+                line-height: .3rem;
+                width: .85rem;
+                height: .01rem;
+                display: inline-block;
+                background: #efe4e4;
+                margin-bottom: .04rem;
+            }
+            span{
+                margin:0 .05rem;
+            }
+        }
+        .communication{
+            padding-top: .3rem;
+            width: 100%;
+            @include flexbox();
+            padding-bottom: .5rem;
+            a{
+                @include flex();
+                i{
+                    width: .38rem;
+                    height: .38rem;
+                    border:1px solid #645a5a;
+                    font-size: .24rem;
+                    line-height: .28rem;
+                    display: inline-block;
+                    @include border-radius(50%);
+                    color: #645a5a;
+                }              
+            }
+        }
     }
+    
+    .mine_register{
+        @include flex()
+        width:100%;
+        overflow: hidden;
+        text-align: center; 
+        form{
+            padding-top: 1.15rem;
+        }  
+    }
+    form{
+          font-size: .12rem;
+          color:#8e7b7b ;
+        .user{
+            @include flexbox();
+            margin:0 auto ;
+            width: 2.85rem;
+            height: .3rem;
+            i{
+                margin-right: .1rem;
+                font-size: .18rem;
+            }
+            input{
+                border: 0;
+                border-bottom: 1px solid #efe4e4;
+                width: 2.55rem;
+                height: .3rem;
+            }
+             input[name="user"]::-webkit-input-placeholder { 
+            color: #8e7b7b;
+            }
+        }
+        .pass{
+             @include flexbox();
+            margin:0 auto ;
+            margin-top: .15rem;
+             width: 2.85rem;
+            height: .3rem;
+            i{
+                margin-right: .1rem;
+                font-size: .18rem;
+            }
+            input{
+                border: 0;
+                border-bottom: 1px solid #efe4e4;
+                width: 2.55rem;
+                height: .3rem;
+                
+            }
+              input[name="pass"]::-webkit-input-placeholder { 
+                 color: #8e7b7b;
+            }          
+        }
+        .submit{
+            margin-top: .3rem;
+            width: 2.85rem;
+            height: .42rem;
+            border: 0;
+            font-size: .14rem;
+            color: #fff;
+            background-color: #dcd2d2;
+        }
+        }
 }

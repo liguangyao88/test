@@ -2,14 +2,13 @@ import React,{Component} from "react"
 
 import MineLogin from "./children/MineLogin"
 
-import Footer from "../common/Footer"
+//import Footer from "../common/Footer"
 
 export default class Mine extends Component {
 	render(){
 		return (
 			<div className="m-mine">
-				<MineLogin />
-				<Footer />
+				{this.props.children}				
 			</div>
 		)
 	}
