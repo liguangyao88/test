@@ -39,7 +39,22 @@ export default class Top100 extends Component {
 			return (
     
 		    	<div className="list_bgBox">
-		    	<Scroller extraClass={'yo-scroller-a'} scrollX={false} scrollY={true}>
+		    	<Scroller extraClass={'yo-scroller-a'} scrollX={false} scrollY={true}
+			    	ref="scroller"
+		            	usePullRefresh={true}
+		            	onRefresh={()=>{
+			              fetch("/api/v2/ranks_v3/ranks/2?limit=100&offset=0")
+			                .then((response)=>response.json())
+					     .then((res)=>{
+							this.setState({
+								data: this.state.data.concat (res.data.items)
+							})
+			                 this.refs.scroller.stopRefreshing(true);
+	
+			                })
+			            }}	            	
+		    	
+		    	>
 		    	  <div className="list_banner">
 			           <img src="http://img01.liwushuo.com/image/160909/uzptw7wlm.png-w720" alt=""/>
 			      </div>
