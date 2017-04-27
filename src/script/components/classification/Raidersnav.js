@@ -9,15 +9,6 @@ class Raidersnav extends Component {
       </div>
     )
   }
-  componentDidMount() {
-    fetch(this.props.uri)
-      .then((response)=>response.json())
-      .then((res)=>{
-        this.setState({
-          dataSource: res.subjects
-        })
-      })
-  }
 }
 
 export default Raidersnav

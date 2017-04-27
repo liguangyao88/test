@@ -12,7 +12,7 @@ export default class IndexItem extends Component {
 	getlist(list){
 		return list.map((value,index)=>{
 			return (
-//				console.log(value.column.title)
+				// console.log(value.column.title)
 				//这里也得包一层div
 				<div className="index_item">
 					<section>
@@ -36,7 +36,6 @@ export default class IndexItem extends Component {
 						<p>251</p>
 					</div>
 				</div>
-
 			)
 		})
 	}
