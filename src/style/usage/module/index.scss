@@ -39,7 +39,7 @@
             font-weight: bolder;
             line-height: 0.31rem;
         }
-        >span{
+        span{
             @include flex();
             background: #FAF5F5;
             height:0.31rem;
@@ -48,7 +48,18 @@
             line-height:0.31rem;
             font-size:0.13rem;
             color: $font-color;
-            
+            a{
+                display: block;
+                width:100%;
+                height:100%;
+                color: $font-color;
+               b{
+                display: inline-block;
+                margin-top:-0.06rem;
+                padding-right: 0.03rem;
+                 color: $font-color;
+                } 
+            }           
         }
         >i{
             padding: 0 0.11rem;
@@ -117,37 +128,45 @@
             @include flex-wrap(wrap);
             background: white;
             text-align: center;
-            >section{
-                @include flexbox();
-                @include flex-direction(column);
-                @include justify-content(center);
-                @include align-items(center);
+            section{
                 width:33.3%;
                 height:1rem;
-                @include border(0 2px 2px 0,$base-background)
+                @include border(0 2px 2px 0,$base-background);
                 &:nth-child(3n){
                     @include border(0 0 2px 0,$base-background)
                 }
                  &:nth-child(1) span{
                      background: #FE9E9C;
                    }
-                &:nth-child(2) span{
-                 background: #FFD494;  
-                }
-                &:nth-child(3) span{
-                 background: #FFCEBE;  
-                }
-                &:nth-child(4) span{
-                 background: #A7C3F8;  
-                 line-height: 0.3rem;
-                }
-                &:nth-child(5) span{
-                 background: #DCC5FF;  
-                 line-height: 0.3rem;
-                }
-                &:nth-child(6) span{
-                 background: #B2DBA0;  
-                }
+                    &:nth-child(2) span{
+                     background: #FFD494;  
+                    }
+                    &:nth-child(3) span{
+                     background: #FFCEBE;  
+                    }
+                    &:nth-child(4) span{
+                     background: #A7C3F8;  
+                     line-height: 0.3rem;
+                    }
+                    &:nth-child(5) span{
+                     background: #DCC5FF;  
+                     line-height: 0.3rem;
+                    }
+                    &:nth-child(6) span{
+                     background: #B2DBA0;  
+                    }
+                
+                a{
+                    
+                    display: block;
+                    @include flexbox();
+                    @include flex-direction(column);
+                    @include justify-content(center);
+                    @include align-items(center); 
+                    width:100%;
+                    height: 100%;
+                    
+                  
                 
                 >span{
                   width:0.3rem;
@@ -165,7 +184,9 @@
                 >p{
                     font-size: 0.12rem;                   
                     color: $font-color;
+                } 
                 }
+                 
             }
         }
         

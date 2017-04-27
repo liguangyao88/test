@@ -46,8 +46,10 @@ import ListDay from './components/list/commonlist/ListDay'
 //引入榜单页结束
 //console.log(Top100)
 
+import Search from "./components/search/Search"
+//console.log(Search)
 
-
+import Self from "./components/self/Self"
 
 ReactDOM.render((
   <Router history={hashHistory}>
@@ -71,6 +73,8 @@ ReactDOM.render((
       <Route path="/classification/single" component={Single} />
     	</Route>
     <Route path="/mine" component={Mine}></Route>
+    <Route path="/search" component={Search}></Route>
+    <Route path="/self" component={Self}></Route>
   </Router>
 ), document.getElementById('root'))
 

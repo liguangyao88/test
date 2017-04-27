@@ -1,5 +1,7 @@
 import React,{Component} from "react"
 
+import Loading, {loading} from '../../../../component_dev/loading/src'
+
 export default class IndexItem extends Component {
 	
 	constructor(props){
@@ -8,6 +10,10 @@ export default class IndexItem extends Component {
 			data:[]
 		}
 	}
+	
+	 componentWillMount() {
+	    loading.show()
+	  }
 	
 	getlist(list){
 		return list.map((value,index)=>{
@@ -60,6 +66,7 @@ export default class IndexItem extends Component {
 			this.setState({
 				data:res.data.items
 			})
+			loading.hide()
      	 })
 	}
 }
