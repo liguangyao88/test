@@ -1,5 +1,7 @@
 import React,{Component} from "react"
 
+import Loading, {loading} from '../../../../component_dev/loading/src'
+
 export default class IndexItem extends Component {
 	
 	constructor(props){
@@ -9,10 +11,14 @@ export default class IndexItem extends Component {
 		}
 	}
 	
+	 componentWillMount() {
+	    loading.show()
+	  }
+	
 	getlist(list){
 		return list.map((value,index)=>{
 			return (
-//				console.log(value.column.title)
+				// console.log(value.column.title)
 				//这里也得包一层div
 				<div className="index_item">
 					<section>
@@ -36,7 +42,6 @@ export default class IndexItem extends Component {
 						<p>251</p>
 					</div>
 				</div>
-
 			)
 		})
 	}
@@ -53,14 +58,14 @@ export default class IndexItem extends Component {
 	
 	componentDidMount(){
 		let a = this.props.uri
-		console.log(a)
+//		console.log(a)
 		fetch(`json/${a}`)
 	      .then((response)=>response.json())
 	      .then((res)=>{
-//			console.log(res.data.items.column.title)
 			this.setState({
 				data:res.data.items
 			})
+			loading.hide()
      	 })
 	}
 }

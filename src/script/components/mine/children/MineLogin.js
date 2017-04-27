@@ -36,8 +36,7 @@ export default class MineLogin extends Component {
     this.submit({
       uri: '/nodejs/users/login',
       callback: (res)=>{
-      	console.log(res.username)
-        if (res.users=="ok") {
+        if (res.users) {
           localStorage.setItem('username', res.users)
 			hashHistory.push("/MineSouvenir")		
         } else{

@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 
-class Classificationnav extends Component {
+class Raidersnav extends Component {
   render() {
     return (
-      <div className="m-classificationnav">
+      <div className="m-Raidersnav">
       	<div><span>栏目</span></div>
       	<div><span>查看全部</span><em></em></div>
       </div>
@@ -11,4 +11,4 @@ class Classificationnav extends Component {
   }
 }
 
-export default Classificationnav
+export default Raidersnav

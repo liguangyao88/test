@@ -94,9 +94,7 @@ module.exports = {
 	//根据模板自动生成html
 	new HtmlWebpackPlugin({
 		template:"./src/index.ejs",//模板路径
-		filename:"index.html",
-		title:"天天果园",
-		name:"光耀"
+		filename:"index.html"
 	}),
 	
 	//压缩代码

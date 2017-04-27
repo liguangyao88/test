@@ -12,7 +12,7 @@ import Footer from "../common/Footer"
 
 export default class Index extends Component {
 	render(){
-		console.log(this)
+//		console.log(this)
 		return (
 			<div className="m-index">
 				<IndexHeader />
