@@ -11,6 +11,7 @@
         padding:0 0.15rem;
         @include flexbox();
         @include align-items(center);
+        @include border(0 0 1px 0,#F5EEEE)
         i{
             font-size:0.18rem;
         }
@@ -24,7 +25,8 @@
     .self_middle{
         @include flex();
         width:100%;
-        overflow: hidden;
+//      overflow: hidden;
+           overflow-y: scroll;
         .self_banner{
             width:100%;
             img{
@@ -36,8 +38,91 @@
             width:100%;
             height:2.25rem;
             background: white;
-            padding-left: 0.25rem;
-            padding-right: 0.25rem;
+            padding-left: 0.22rem;
+            padding-right: 0.22rem;
+            h1{
+                font-size:0.22rem;
+                line-height: 0.9rem;
+                font-weight: normal;
+            }
+            p{
+                width:0.42rem;
+                height:0.01rem;
+                background: black;
+            }
+            h5{
+                font-size:0.15rem;
+                line-height: 0.33rem;
+                margin-top: 0.2rem;
+                font-weight: normal;
+            }
         }
+        .self_list{
+            width:100%;
+            background: #FAF5F5;
+            padding-top:0.06rem;
+            
+            ul{
+                width:100%;
+                @include flexbox();
+                @include flex-wrap(wrap);
+                padding-left: 0.05rem;
+                padding-right: 0.05rem;
+                li{
+                    width:50%;
+                    height:2.7rem;
+                    padding: 0 0.05rem;
+                    margin-top: 0.11rem;
+                    a{
+                        display: block;
+                        width:100%;
+                        height:100%;
+//                      border:1px solid red;
+                        background: white;
+                          section{
+                              width:100%;
+                              height:1.76rem;
+                              img{
+                                  width:100%;
+                                  height: 100%;
+                              }
+                          }
+                          .self_msg{
+                              padding-left: 0.1rem;
+                              padding-top: 0.06rem;
+                              h2{
+                                  font-size:0.13rem;
+                                  color: black;
+                                  line-height: 0.22rem;
+                                  font-weight: normal;
+                                  @include ellipsis(null,1)
+                              }
+                              p{
+                                  height:0.38rem;
+                                  line-height: 0.19rem;
+                                  @include ellipsis(1.42rem,2);
+                                  font-size:0.12rem;
+                                  color: $font-color;
+                              }
+                              h5{
+                                  padding-top: 0.03rem;
+                                  font-size:0.13rem;
+                                  line-height: 0.2rem;
+                                  color: red;
+                              }
+                          }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.yo-scroller-b{
+    height: 100%;
+    touch-action: none;
+    .scroller{
+        height:29.67rem;
     }
 }

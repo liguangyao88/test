@@ -62,6 +62,10 @@ import Search from "./components/search/Search"
 
 import Self from "./components/self/Self"
 
+import Detail from "./components/detail/Detail"
+
+//console.log(Detail)
+
 ReactDOM.render((
   <Router history={hashHistory}>
     <Route path="/" component={Index}>
@@ -85,6 +89,7 @@ ReactDOM.render((
     	</Route>
     <Route path="/search" component={Search}></Route>
     <Route path="/self" component={Self}></Route>
+    <Route path="/detail/:id" component={Detail}></Route>
     <Route path="/mine" component={Mine}>
     			<IndexRedirect to="/mine/MineLogin" />
     			<Route path="/mine/MineLogin" component={MineLogin}></Route>

@@ -32,7 +32,6 @@ export default class Search extends Component {
 //	console.log(this.state.goodlist)
     return (
         <div className="m-search">
-        	<div>456</div>
         		<Suggest 
         			ref="suggest"
 					placeholder={"选份走心好礼送给Ta"}
@@ -84,7 +83,7 @@ export default class Search extends Component {
 					          <div className="search_description">
 						            <h1>{value.short_description}</h1>
 						            <h5>{value.name}</h5>
-						            <p>$ <i>{value.price}</i></p>
+						            <p>￥ <i>{value.price}</i></p>
 					          </div>
 						   </section>
                     )
