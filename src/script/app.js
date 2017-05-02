@@ -24,6 +24,7 @@ import Mine from './components/mine/Mine'
 
 import MineSouvenir from './components/mine/children/MineSouvenir'
 
+
 import MineRegister from './components/mine/children/MineRegister'
 
 import MineLogin from './components/mine/children/MineLogin'
@@ -52,8 +53,8 @@ import ListDay from './components/list/commonlist/ListDay'
 
 //引入榜单页结束
 
-
-
+import mineGlue from './components/mine/children/mineGlue'
+import mineDan from './components/mine/children/mineDan'
 
 //console.log(Top100)
 
@@ -95,7 +96,11 @@ ReactDOM.render((
     			<Route path="/mine/MineLogin" component={MineLogin}></Route>
          <Route path="/mine/MineRegister" component={MineRegister}></Route>
     </Route>
-    <Route path="/MineSouvenir" component={MineSouvenir}></Route>
+    <Route path="/MineSouvenir" component={MineSouvenir}>
+       <IndexRedirect to="/MineSouvenir/mineDan" />
+       <Route path="/MineSouvenir/mineDan" component={mineDan}></Route>
+       <Route path="/MineSouvenir/mineGlue" component={mineGlue}></Route>       
+    </Route>
   </Router>
 ), document.getElementById('root'))
 

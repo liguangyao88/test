@@ -52,13 +52,6 @@ export default class MineLogin extends Component {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
 	render(){
 		return (
 			<div>

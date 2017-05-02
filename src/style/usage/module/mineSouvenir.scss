@@ -1,0 +1,171 @@
+.mine_Souvenir{
+    width:100%;
+    height:100%;
+    @include flexbox();
+    @include flex-direction(column);      
+     background: #faf5f5;
+     .Mine_User{
+         @include flexbox();
+        @include flex-direction(column); 
+        padding:0 .2rem ;      
+        background: #fffefe;
+    .Sou_nav{  
+        line-height: .48rem;
+        @include flexbox();
+        font-size: .18rem;
+        width:100%;
+        i:nth-of-type(2){
+             padding-right: .24rem;
+        }
+        .nav_user{
+            font-size: .14rem;
+            width: 2.6rem;
+             padding-left: 1.25rem;
+        }             
+    }
+    .user_information{
+            @include flexbox();
+            
+            .user_img{
+                margin-top: -.15rem;
+                font-size: .7rem;
+                padding-right: .5rem;
+                color: #9d6b57;
+            }
+            ul{
+                width: 100%;
+                padding-top: .44rem;
+                @include flexbox();
+                text-align: center;
+                 li{
+                @include flex();
+                margin-top: -.1rem;
+                color: #271212;
+            }
+            span{
+                color: #eee3e3;
+            }
+            }                       
+        }
+    .user_privilege{      
+        padding: .32rem 0;
+        @include flexbox();
+        width: 100%;
+        ul{
+            @include flexbox();
+             width: 100%;
+             text-align: center;
+            li{
+                @include flex()
+                i{
+                    font-size: .18rem;
+                }
+            }
+        }
+    }
+}
+
+.mine_love{
+     @include flexbox();
+    @include flex-direction(column);     
+    margin-top: .1rem; 
+    background: #fffefe;    
+    .love_xz{
+        width: 100%;
+        @include flexbox();
+        a{ 
+            width: 100%;
+            display: block;
+            @include flex();
+            font-size: .13rem;
+            color: #333;
+            line-height: .4rem;
+            @include border(0 0 2px 0,#faf5f5)
+            @include flexbox();
+            @include justify-content(center);
+            &.active {
+               color: #fd224c;
+            }
+        }
+    } 
+
+           
+    .love_lw{
+        padding:0 .2rem ;
+        padding-top: .15rem;
+        span{
+            font-size: .14rem;
+            color: #382525;
+        }
+        b{
+            padding-left: .06rem;
+            width: .3rem;
+            height: .15rem;
+            font-size: .12rem;
+            display: inline-block;
+            @include transform(scale(.7));
+            color: #746464;
+        }
+        i{
+            padding-left: 1.9rem;
+            font-size: .12rem;
+            color: #dbd1d1;
+        }
+    }
+    
+    .love_num{
+        font-size: .12rem;
+        display: block;
+        @include transform(scale(.7));
+    }
+    .love_n{
+        margin-top: .1rem;
+        @include flexbox();
+        @include flex-direction(column);
+        width: .84rem;
+        height: .84rem;
+        background: #faf5f5;
+        text-align: center;
+        margin-left: .2rem;
+        i{
+            margin-top: .2rem;
+            font-size: .12rem;
+            color: #dcd2d2;
+
+            
+        }
+        b{
+            font-size: .12rem;
+            display: block;
+            @include transform(scale(.8)); 
+            color: #dcd2d2;
+        }
+    }
+    .love_xj{
+        padding:.3rem .2rem 1rem .2rem;
+        color: #240f0f;
+        i{
+            font-size: .38rem;
+            color: #ff4258;
+            margin-top: -.1rem;
+            display: inline-block;
+            padding-right: .13rem;
+        }
+    }
+    .mine_glue{
+        padding-bottom: 1.5rem;
+        text-align: center;
+        i{
+            font-size:1rem;
+            color: #fd224c;            
+        }
+        p{
+            font-size: .12rem;
+            color: #dcd2d2;
+        }
+    }
+}
+
+
+
+}
