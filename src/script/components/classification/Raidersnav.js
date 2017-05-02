@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
 class Raidersnav extends Component {
+	
   render() {
     return (
       <div className="m-Raidersnav">
@@ -9,6 +10,7 @@ class Raidersnav extends Component {
       </div>
     )
   }
+
 }
 
 export default Raidersnav
