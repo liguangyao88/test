@@ -26,7 +26,7 @@ export default class Top100 extends Component {
 			          <dd>
 			            <h1>{value.short_description}</h1>
 			            <b>{value.name}</b>
-			            <p>$ <i>{value.price}</i></p>
+			            <p>￥<i>{value.price}</i></p>
 			          </dd>
 				     </dl>
 				)			
