@@ -1,45 +1,36 @@
 import React, {Component} from 'react'
 import Loading, {loading} from '../../../component_dev/loading/src'
 
-//import Raidersnav from './Raidersnav'
 
 class Raidersother extends Component {
 	constructor(props){
 		super(props)
 		this.state={
 			data:[],
-      title: ''
+	      	title: ''
 		}
 	}
 
-getMovieList(list) {
-    return list.map((value, index)=>{
-      return (
-      	<div className="m-Raidersmore">
-			<img src={value.cover_image_url}/>
-		</div>
-      )
-    })
-}
-
-//gettitle(nav){
-//	console.log(nav)
-//  return nav.map((value, index)=>{
-//    return (
-//    	<div><span>栏目</span></div>
-//    )
-//  }
-//}
+	getMovieList(list) {
+	    return list.map((value, index)=>{
+	      return (
+	      	<div className="m-Raidersmore">
+				<img src={value.cover_image_url}/>
+			</div>
+	      )
+	    })
+	}
 
 	componentWillMount() {
 	   loading.show()
 	}
   
-  render(){
+  	render(){
 		return (
+			
 			<div className="m-888">
 				<div className="m-Raidersnav">
-			      	<div><span>栏目</span></div>
+			      	<div><span>品类</span></div>
 			      	<div><span>查看全部</span><em></em></div>
 			    </div>
 				<div className="m-666">
@@ -50,7 +41,7 @@ getMovieList(list) {
 	}
 
 
-  componentDidMount(){
+  	componentDidMount(){
 		let a = this.props.uri
 //		console.log(a)
 		fetch(`json/${a}`)

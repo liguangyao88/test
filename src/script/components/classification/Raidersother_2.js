@@ -12,7 +12,10 @@ class Raidersother_2 extends Component {
   	render(){
 		return (
 			<div className="m-888">
-				<Raidersnav />
+				<div className="m-Raidersnav">
+			      	<div><span>对象</span></div>
+			      	<div><span>查看全部</span><em></em></div>
+			    </div>
 				<div className="m-666">
 					<div className="m-Raidersmore">
 					    <img src='./img/songnvpiao.png'/>

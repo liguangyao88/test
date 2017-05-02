@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import Raidersnav from './Raidersnav'
+//import Raidersnav from './Raidersnav'
 
 class Raidersother_1 extends Component {
 	constructor(props){
@@ -12,7 +12,10 @@ class Raidersother_1 extends Component {
   	render(){
 		return (
 			<div className="m-888">
-				<Raidersnav />
+				<div className="m-Raidersnav">
+			      	<div><span>风格</span></div>
+			      	<div><span>查看全部</span><em></em></div>
+			    </div>
 				<div className="m-666">
 					<div className="m-Raidersmore">
 					    <img src='./img/chuangyishenghuo.png'/>

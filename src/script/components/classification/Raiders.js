@@ -21,10 +21,14 @@ export default class Raiders extends Component{
 		return (
 		  <div className="m-Raiderscontent">
 	      	<div>
-	      		<Raiderscolumn />
+	      	<Scroller
+		      	ref="scroller"
+	      	>
+	      	<Raiderscolumn />
 		      	<Raidersother uri="classification2" />
 		      	<Raidersother_1 />
 		      	<Raidersother_2 />
+		    </Scroller>
 	      	</div>
 	      </div>
 		);
