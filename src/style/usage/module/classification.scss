@@ -150,14 +150,13 @@
                 margin-bottom: .1rem;
                 .m-666{
                     background: #fff;
+                    width: 3.5rem;
+                    margin: 0 auto;
+                    @include flexbox();
+                    @include flex-wrap(wrap);
+                    @include justify-content(space-between);
                     .m-Raidersmore {
                         background: #fff;
-                        width: 3.5rem;
-                        margin: 0 auto;
-                        @include flexbox();
-                        @include flex-wrap(wrap);
-                        @include justify-content(space-between);
-                        
                         img{
                             height: 1rem;
                             width: 1.7rem;
@@ -180,22 +179,27 @@
     @include flex(1);
     height: 100%;
     width: 100%;
-    background: #faf5f5;
+    background: #fff;
     overflow-y: scroll;
     .m-Singlelist{
+        @include flexbox();
+        @include flex-direction()
         ul{
             background: #fff;
             width: .88rem;
+
             li{
                 height: .48rem;
+                line-height: .48rem;
                 background: #f6f6f7;
                 i{
                     margin-right: .13rem;
-                    display: inline;
+                    display: inline-block;
                     height: 100%;
                     width: .03rem;
                     background: #ff2a44;
                     opacity: 0;
+                    float: left;
                 }
             }
             .active{
@@ -203,6 +207,26 @@
                 background: #fff;
                 i{
                     opacity: 1;
+                }
+            }
+        }
+        .m-Singlelist_r{
+            width: 2.85rem;
+            @include flex-wrap(wrap);
+            @include flexbox();
+            dl{
+                height: 1.5rem;
+                width: .9rem;
+                dt{
+                    height: 1.05rem;
+                    width: 1rem;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                dd{
+                    text-align: center;
                 }
             }
         }
